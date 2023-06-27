@@ -1,0 +1,37 @@
+﻿<Page x:Class="ManagementSystemWPFApp.Views.TenantsPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ManagementSystemWPFApp.Views"
+      mc:Ignorable="d" 
+      Background="AntiqueWhite"
+      d:DesignHeight="720" d:DesignWidth="1200"
+      Title="TenantsPage">
+
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/Views/news-23-04-2021-03.jpg"/>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="70"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Button x:Name="GoBack" Click="GoBack_Click"  Grid.Row="1" Width="175" HorizontalAlignment="Left" Margin="57,13,0,573" Background="#FFDCBFE3" FontSize="18">Назад</Button>
+
+        <StackPanel Grid.Row="1" Width="600" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="306,13,0,0">
+            <Label FontSize="18" Background="#FF4A4A4A" Foreground="#FFDCBFE3">Арендатор</Label>
+            <ComboBox x:Name="TenantsComboBox" Height="40" SelectedItem="{Binding Tenants}" DisplayMemberPath="TenantName"></ComboBox>
+            <Label FontSize="18" Background="#FF4A4A4A" Foreground="#FFDCBFE3">Павильон</Label>
+            <ComboBox x:Name="PavilionsComboBox" Height="40" SelectedItem="{Binding Pavilions}" DisplayMemberPath="PavilionNumber"></ComboBox>
+            <Label FontSize="18" Background="#FF4A4A4A" Foreground="#FFDCBFE3">ТЦ</Label>
+            <ComboBox x:Name="MallsComboBox" Height="40" SelectedItem="{Binding Malls}" DisplayMemberPath="MallName"></ComboBox>
+            <Label FontSize="18" Background="#FF4A4A4A" Foreground="#FFDCBFE3">Старт аренды</Label>
+            <DatePicker x:Name="LeaseStartDatePicker"></DatePicker>
+            <Label FontSize="18" Background="#FF4A4A4A" Foreground="#FFDCBFE3">Конец аренды</Label>
+            <DatePicker x:Name="LeaseEndDatePicker"></DatePicker>
+            <Button x:Name="SaveButton" Click="SaveButton_Click" Content="Сохранить" Margin="0 20 0 0" Height="46" Background="#FFDCBFE3" FontSize="18"></Button>
+        </StackPanel>
+    </Grid>
+</Page>

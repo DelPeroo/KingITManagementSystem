@@ -1,0 +1,10 @@
+﻿<Application x:Class="ManagementSystemWPFApp.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:ManagementSystemWPFApp" 
+             xmlns:imageDecode="clr-namespace:ManagementSystemWPFApp.ImageDecoder"
+             StartupUri="Views/AppWindow.xaml">
+    <Application.Resources>
+        <imageDecode:ImageDecode x:Key="ImageDecode"/>
+    </Application.Resources>
+</Application>

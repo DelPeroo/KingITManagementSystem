@@ -1,0 +1,38 @@
+﻿<Page x:Class="ManagementSystemWPFApp.Views.AddTenantPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ManagementSystemWPFApp.Views"
+      mc:Ignorable="d" 
+      Background="AntiqueWhite"
+      d:DesignHeight="720" d:DesignWidth="1200"
+      Title="AddTenantPage">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/Views/059e341b9617d4ceb406c0e144b74119.jpeg"/>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="75"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Button x:Name="GoBackButton" HorizontalAlignment="Left" Width="179" Click="GoBackButton_Click" Background="#FFDCBFE3" Margin="35,0,0,576" Grid.Row="1">Назад</Button>
+
+        <StackPanel Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Width="600">
+            <Label FontSize="18">Арендатор</Label>
+            <TextBox Height="30" Text="{Binding TenantName}"></TextBox>
+            <Label FontSize="18">Номер телефона</Label>
+            <TextBox Height="30" Text="{Binding TenantPhone}"></TextBox>
+            <Label FontSize="18">Адрес</Label>
+            <TextBox Height="30" Text="{Binding TenantAddress}"></TextBox>
+            <Label FontSize="18">Сфера деятельности</Label>
+            <TextBox x:Name="FieldOfActivityTextBox" Height="30"></TextBox>
+            <Label FontSize="18">Список услуг (через запятую)</Label>
+            <TextBox x:Name="ServiceListTextBox" Height="30"></TextBox>
+            <Label FontSize="18">Лицензия</Label>
+            <TextBox x:Name="LicenseTextBox" Height="30"></TextBox>
+            <Button x:Name="SaveButton" Height="30" Margin="0 20 0 0" Click="SaveButton_Click" Background="#FFDCBFE3">Сохранить</Button>
+        </StackPanel>
+    </Grid>
+</Page>
